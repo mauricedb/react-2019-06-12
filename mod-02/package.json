@@ -1,0 +1,39 @@
+{
+  "name": "mod-02",
+  "version": "0.0.1",
+  "description": "De tooling demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server ./dist",
+    "webpack": "webpack",
+    "eslint": "eslint ./src/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauricedb/react-2019-06-12.git"
+  },
+  "keywords": [
+    "tooling",
+    "demo"
+  ],
+  "author": "Maurice de Beijer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mauricedb/react-2019-06-12/issues"
+  },
+  "homepage": "https://github.com/mauricedb/react-2019-06-12#readme",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "webpack": "^4.33.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "webpack-cli": "^3.3.4"
+  }
+}
