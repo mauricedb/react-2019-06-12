@@ -15,3 +15,10 @@
 - [React Food Truck 🍔](https://marketplace.visualstudio.com/items?itemName=burkeholland.react-food-truck)
 - [Prettier](https://prettier.io/)
 - [Greenkeeper](https://greenkeeper.io/)
+
+## Single Page Applications
+
+- []()
+- []()
+- []()
+- []()
