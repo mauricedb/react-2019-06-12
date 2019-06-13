@@ -12,7 +12,12 @@ const Clock = ({ interval }) => {
     return () => clearInterval(handle);
   }, [interval]);
 
-  return <div>{time.toLocaleTimeString()}</div>;
+  return (
+    <>
+      <Greeter firstName="Jack" />
+      <div>{time.toLocaleTimeString()}</div>
+    </>
+  );
 };
 
 export default Clock;
