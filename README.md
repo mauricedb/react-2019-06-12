@@ -28,5 +28,11 @@
 ## Redux
 
 - [Redux DevTools](https://github.com/zalmoxisus/redux-devtools-extension#usage)
-- []()
+
+## RxJS
+
+- [RxJS](https://rxjs.dev/)
+- [ReactiveX](http://reactivex.io/)
+- [RxJS Marbles](https://rxmarbles.com/)
+
 - []()
