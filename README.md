@@ -20,7 +20,12 @@
 
 - [React Router](https://reacttraining.com/react-router/)
 
-##
+## Flux
+
+- [Can I use?](https://caniuse.com/)
+- [ECMAScript 6 compatibility table](https://kangax.github.io/compat-table/es6/)
+
+## Redux
 
 - []()
 - []()
