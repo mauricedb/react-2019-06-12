@@ -27,6 +27,6 @@
 
 ## Redux
 
-- []()
+- [Redux DevTools](https://github.com/zalmoxisus/redux-devtools-extension#usage)
 - []()
 - []()
