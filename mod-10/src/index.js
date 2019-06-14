@@ -1,14 +1,12 @@
 var Calculator = /** @class */ (function () {
-    // private msg: string = "";
     function Calculator(msg) {
-        if (msg === void 0) { msg = "The default"; }
         this.msg = msg;
-        // this.msg = msg;
     }
     Calculator.prototype.add = function (x, y) {
         var result = x + y;
-        // this.msg = 'Stuff'
-        console.log(this.msg, result);
+        if (typeof this.msg !== "undefined") {
+            console.log(this.msg.toString(), result);
+        }
         return result;
     };
     Calculator.prototype.subtract = function (x, y) {
@@ -23,12 +21,16 @@ var add = document.getElementById("add");
 var subtract = document.getElementById("subtract");
 var result = document.getElementById("result");
 var calculator = new Calculator();
-add.addEventListener("click", function () {
-    result.textContent = calculator.add(+x.value, +y.value).toString();
-});
-subtract.addEventListener("click", function () {
-    result.textContent = calculator.subtract(x.value, y.value).toString();
-});
+if (add && result) {
+    add.addEventListener("click", function () {
+        result.textContent = calculator.add(+x.value, +y.value).toString();
+    });
+}
+if (subtract && result) {
+    subtract.addEventListener("click", function () {
+        result.textContent = calculator.subtract(+x.value, +y.value).toString();
+    });
+}
 var person = {
     firstName: "",
     lastName: "",
@@ -55,4 +57,13 @@ var b = {
     name: "",
     city: "",
     street: ""
+};
+function doThing(animal) {
+    if (animal.theAnimalType === "dog") {
+        animal.eat();
+    }
+}
+var demo = "one";
+var cat = {
+    name: "Zorro"
 };
