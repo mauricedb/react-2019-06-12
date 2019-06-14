@@ -1,58 +1,17 @@
 import React, { Component } from "react";
+import CounterView from "./counterView";
+import withErrorBoundary from "./withErrorBoundary";
+import IncrementContext from "./incrementContext";
 
-function withErrorBoundary(WrappedComponent) {
-  return class extends React.Component {
-    state = { error: null };
+function Counter() {
+  const [count, setCount] = React.useState(0);
+  const value2 = React.useContext(IncrementContext);
 
-    static getDerivedStateFromError(error) {
-      return { error };
-    }
-    componentDidCatch(error, info) {
-      console.warn("Oops", error, info);
-    }
-
-    render() {
-      const { error } = this.state;
-      if (error) return <div>Error: {error.message}</div>;
-      return <WrappedComponent {...this.props} />;
-    }
-  };
-}
-
-function CounterView(prop) {
-  const { count, increment } = prop;
-
-  return (
-    <div>
-      <div>Count: {count.toString()}</div>
-      <div>
-        <button onClick={increment}>Increment</button>
-      </div>
-    </div>
-  );
-}
-
-class Counter extends Component {
-  // constructor() {
-  //   super();
-  //   this.increment = this.increment.bind(this);
-  // }
-
-  state = { count: 0 };
-
-  increment = () => {
-    if (this.state.count > 5) {
-      this.setState({ count: null });
-    } else {
-      this.setState({ count: this.state.count + 1 });
-    }
-  };
-
-  render() {
-    const { count } = this.state;
-
-    return <CounterView count={count} increment={this.increment} />;
+  function increment() {
+    setCount(count + value2.x);
   }
+
+  return <CounterView count={count} increment={increment} />;
 }
 
 export default withErrorBoundary(Counter);

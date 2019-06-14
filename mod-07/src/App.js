@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Clock interval={1000} />
       <Greeter firstName="Maurice" />
+      <Greeter firstName2="Jack" />
       <Counter />
     </div>
   );

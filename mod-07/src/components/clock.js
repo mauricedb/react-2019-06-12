@@ -4,6 +4,7 @@ import Greeter from "./greeter";
 
 const Clock = ({ interval }) => {
   const [time, setTime] = useState(new Date());
+  
   useEffect(() => {
     const handle = setInterval(() => {
       setTime(new Date());
