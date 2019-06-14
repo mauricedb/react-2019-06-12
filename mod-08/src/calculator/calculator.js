@@ -1,10 +1,18 @@
 class Calculator {
   add(x, y) {
-    return 0;
+    return x + y;
   }
 
   subtract(x, y) {
-    return 0;
+    return x - y;
+  }
+
+  multiply(x, y) {
+    return new Promise(function(resolve) {
+      setTimeout(function() {
+        resolve(x * y);
+      }, 200);
+    });
   }
 }
 
